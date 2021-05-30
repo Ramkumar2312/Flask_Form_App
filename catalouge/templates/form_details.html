@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+Title
+
+{% endblock %}
+{% block content %}
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for msg in messages %}
+        <h2>{{ msg }}</h2>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+<h1>{{product_i}}</h1>
+<h1>{{desc}}</h1>
+<h1>{{prod_nm}}</h1>
+
+<!-- {% for x in arg_list %}
+<h2>{{ x }}</h2>
+{% endfor %} -->
+
+{% endblock %}
